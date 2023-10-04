@@ -1,0 +1,1443 @@
+
+My_Project.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000184  00800100  00000728  000007bc  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000728  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000003  00800284  00800284  00000940  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000940  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000970  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000080  00000000  00000000  000009b0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000014f9  00000000  00000000  00000a30  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000009be  00000000  00000000  00001f29  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000097d  00000000  00000000  000028e7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  0000015c  00000000  00000000  00003264  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000004f9  00000000  00000000  000033c0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000009f3  00000000  00000000  000038b9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000070  00000000  00000000  000042ac  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	60 c0       	rjmp	.+192    	; 0xc6 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	5e c0       	rjmp	.+188    	; 0xc6 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	5c c0       	rjmp	.+184    	; 0xc6 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	5a c0       	rjmp	.+180    	; 0xc6 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	58 c0       	rjmp	.+176    	; 0xc6 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	56 c0       	rjmp	.+172    	; 0xc6 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	54 c0       	rjmp	.+168    	; 0xc6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	52 c0       	rjmp	.+164    	; 0xc6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	50 c0       	rjmp	.+160    	; 0xc6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	4e c0       	rjmp	.+156    	; 0xc6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	4c c0       	rjmp	.+152    	; 0xc6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	4a c0       	rjmp	.+148    	; 0xc6 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	48 c0       	rjmp	.+144    	; 0xc6 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	46 c0       	rjmp	.+140    	; 0xc6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	44 c0       	rjmp	.+136    	; 0xc6 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	42 c0       	rjmp	.+132    	; 0xc6 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	40 c0       	rjmp	.+128    	; 0xc6 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	3e c0       	rjmp	.+124    	; 0xc6 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	3c c0       	rjmp	.+120    	; 0xc6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	3a c0       	rjmp	.+116    	; 0xc6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	38 c0       	rjmp	.+112    	; 0xc6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	36 c0       	rjmp	.+108    	; 0xc6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	34 c0       	rjmp	.+104    	; 0xc6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	32 c0       	rjmp	.+100    	; 0xc6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	30 c0       	rjmp	.+96     	; 0xc6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	2e c0       	rjmp	.+92     	; 0xc6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	2c c0       	rjmp	.+88     	; 0xc6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	2a c0       	rjmp	.+84     	; 0xc6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	28 c0       	rjmp	.+80     	; 0xc6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	26 c0       	rjmp	.+76     	; 0xc6 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	24 c0       	rjmp	.+72     	; 0xc6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	22 c0       	rjmp	.+68     	; 0xc6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	20 c0       	rjmp	.+64     	; 0xc6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	1e c0       	rjmp	.+60     	; 0xc6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	12 e0       	ldi	r17, 0x02	; 2
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	e8 e2       	ldi	r30, 0x28	; 40
+  a0:	f7 e0       	ldi	r31, 0x07	; 7
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a4 38       	cpi	r26, 0x84	; 132
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+  b2:	22 e0       	ldi	r18, 0x02	; 2
+  b4:	a4 e8       	ldi	r26, 0x84	; 132
+  b6:	b2 e0       	ldi	r27, 0x02	; 2
+  b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+  ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+  bc:	a7 38       	cpi	r26, 0x87	; 135
+  be:	b2 07       	cpc	r27, r18
+  c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+  c2:	9d d2       	rcall	.+1338   	; 0x5fe <main>
+  c4:	2f c3       	rjmp	.+1630   	; 0x724 <_exit>
+
+000000c6 <__bad_interrupt>:
+  c6:	9c cf       	rjmp	.-200    	; 0x0 <__vectors>
+
+000000c8 <LCD_cmd>:
+
+void putchar0(char c)		//송신
+{
+	while(!(UCSR0A & (1<<UDRE0)))
+	;
+	UDR0=c;
+  c8:	15 ba       	out	0x15, r1	; 21
+  ca:	8b bb       	out	0x1b, r24	; 27
+  cc:	81 e0       	ldi	r24, 0x01	; 1
+  ce:	85 bb       	out	0x15, r24	; 21
+  d0:	85 e0       	ldi	r24, 0x05	; 5
+  d2:	8a 95       	dec	r24
+  d4:	f1 f7       	brne	.-4      	; 0xd2 <LCD_cmd+0xa>
+  d6:	00 00       	nop
+  d8:	15 ba       	out	0x15, r1	; 21
+  da:	8f e8       	ldi	r24, 0x8F	; 143
+  dc:	91 e0       	ldi	r25, 0x01	; 1
+  de:	01 97       	sbiw	r24, 0x01	; 1
+  e0:	f1 f7       	brne	.-4      	; 0xde <LCD_cmd+0x16>
+  e2:	00 c0       	rjmp	.+0      	; 0xe4 <LCD_cmd+0x1c>
+  e4:	00 00       	nop
+  e6:	08 95       	ret
+
+000000e8 <LCD_init>:
+  e8:	88 e3       	ldi	r24, 0x38	; 56
+  ea:	ee df       	rcall	.-36     	; 0xc8 <LCD_cmd>
+  ec:	8f e0       	ldi	r24, 0x0F	; 15
+  ee:	ec df       	rcall	.-40     	; 0xc8 <LCD_cmd>
+  f0:	86 e0       	ldi	r24, 0x06	; 6
+  f2:	ea df       	rcall	.-44     	; 0xc8 <LCD_cmd>
+  f4:	81 e0       	ldi	r24, 0x01	; 1
+  f6:	e8 df       	rcall	.-48     	; 0xc8 <LCD_cmd>
+  f8:	8f e3       	ldi	r24, 0x3F	; 63
+  fa:	9f e1       	ldi	r25, 0x1F	; 31
+  fc:	01 97       	sbiw	r24, 0x01	; 1
+  fe:	f1 f7       	brne	.-4      	; 0xfc <LCD_init+0x14>
+ 100:	00 c0       	rjmp	.+0      	; 0x102 <LCD_init+0x1a>
+ 102:	00 00       	nop
+ 104:	08 95       	ret
+
+00000106 <LCD_data>:
+ 106:	92 e0       	ldi	r25, 0x02	; 2
+ 108:	95 bb       	out	0x15, r25	; 21
+ 10a:	8b bb       	out	0x1b, r24	; 27
+ 10c:	83 e0       	ldi	r24, 0x03	; 3
+ 10e:	85 bb       	out	0x15, r24	; 21
+ 110:	85 e0       	ldi	r24, 0x05	; 5
+ 112:	8a 95       	dec	r24
+ 114:	f1 f7       	brne	.-4      	; 0x112 <LCD_data+0xc>
+ 116:	00 00       	nop
+ 118:	95 bb       	out	0x15, r25	; 21
+ 11a:	8f e8       	ldi	r24, 0x8F	; 143
+ 11c:	91 e0       	ldi	r25, 0x01	; 1
+ 11e:	01 97       	sbiw	r24, 0x01	; 1
+ 120:	f1 f7       	brne	.-4      	; 0x11e <LCD_data+0x18>
+ 122:	00 c0       	rjmp	.+0      	; 0x124 <LCD_data+0x1e>
+ 124:	00 00       	nop
+ 126:	08 95       	ret
+
+00000128 <LCD_print>:
+ 128:	cf 93       	push	r28
+ 12a:	df 93       	push	r29
+ 12c:	eb 01       	movw	r28, r22
+ 12e:	cc df       	rcall	.-104    	; 0xc8 <LCD_cmd>
+ 130:	88 81       	ld	r24, Y
+ 132:	88 23       	and	r24, r24
+ 134:	29 f0       	breq	.+10     	; 0x140 <LCD_print+0x18>
+ 136:	21 96       	adiw	r28, 0x01	; 1
+ 138:	e6 df       	rcall	.-52     	; 0x106 <LCD_data>
+ 13a:	89 91       	ld	r24, Y+
+ 13c:	81 11       	cpse	r24, r1
+ 13e:	fc cf       	rjmp	.-8      	; 0x138 <LCD_print+0x10>
+ 140:	df 91       	pop	r29
+ 142:	cf 91       	pop	r28
+ 144:	08 95       	ret
+
+00000146 <LCD_char_print>:
+ 146:	cf 93       	push	r28
+ 148:	df 93       	push	r29
+ 14a:	eb 01       	movw	r28, r22
+ 14c:	bd df       	rcall	.-134    	; 0xc8 <LCD_cmd>
+ 14e:	88 81       	ld	r24, Y
+ 150:	da df       	rcall	.-76     	; 0x106 <LCD_data>
+ 152:	df 91       	pop	r29
+ 154:	cf 91       	pop	r28
+ 156:	08 95       	ret
+
+00000158 <init_uart0>:
+ 158:	88 e1       	ldi	r24, 0x18	; 24
+ 15a:	8a b9       	out	0x0a, r24	; 10
+ 15c:	86 e0       	ldi	r24, 0x06	; 6
+ 15e:	80 93 95 00 	sts	0x0095, r24	; 0x800095 <__TEXT_REGION_LENGTH__+0x7e0095>
+ 162:	10 92 90 00 	sts	0x0090, r1	; 0x800090 <__TEXT_REGION_LENGTH__+0x7e0090>
+ 166:	87 e6       	ldi	r24, 0x67	; 103
+ 168:	89 b9       	out	0x09, r24	; 9
+ 16a:	08 95       	ret
+
+0000016c <getchar0>:
+}
+
+char getchar0()		//수신
+{
+	while(!(UCSR0A & (1<<RXC0)))
+ 16c:	5f 9b       	sbis	0x0b, 7	; 11
+ 16e:	fe cf       	rjmp	.-4      	; 0x16c <getchar0>
+	;
+	return(UDR0);
+ 170:	8c b1       	in	r24, 0x0c	; 12
+}
+ 172:	08 95       	ret
+
+00000174 <Keypad_input>:
+
+char Keypad_input(void)                // 키패드 입력받는 함수
+{
+	unsigned char input=' ';            // 키 패드의 입력값, 초기값은 공백문자
+	
+	PORTD = 0xFF;                     // pin 0,1,2,3 은 키패드의 Row(출력)
+ 174:	8f ef       	ldi	r24, 0xFF	; 255
+ 176:	82 bb       	out	0x12, r24	; 18
+	DDRD = 0x0F;                      // pin 4,5,6 은 키패드의 Column(입력)
+ 178:	8f e0       	ldi	r24, 0x0F	; 15
+ 17a:	81 bb       	out	0x11, r24	; 17
+	
+
+	PORTD = 0b11110111;                // 1번 Row 선택
+ 17c:	87 ef       	ldi	r24, 0xF7	; 247
+ 17e:	82 bb       	out	0x12, r24	; 18
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 180:	85 e0       	ldi	r24, 0x05	; 5
+ 182:	8a 95       	dec	r24
+ 184:	f1 f7       	brne	.-4      	; 0x182 <Keypad_input+0xe>
+ 186:	00 00       	nop
+	_delay_us(1);                         // 명령처리 딜레이 타임
+	if ((PIND & 0x10) == 0) input = '1';
+ 188:	84 9b       	sbis	0x10, 4	; 16
+ 18a:	06 c0       	rjmp	.+12     	; 0x198 <Keypad_input+0x24>
+	else if ((PIND & 0x20) == 0) input = '2';
+ 18c:	85 9b       	sbis	0x10, 5	; 16
+ 18e:	06 c0       	rjmp	.+12     	; 0x19c <Keypad_input+0x28>
+	else if ((PIND & 0x40) == 0) input = '3';
+ 190:	86 99       	sbic	0x10, 6	; 16
+ 192:	06 c0       	rjmp	.+12     	; 0x1a0 <Keypad_input+0x2c>
+ 194:	83 e3       	ldi	r24, 0x33	; 51
+ 196:	05 c0       	rjmp	.+10     	; 0x1a2 <Keypad_input+0x2e>
+	DDRD = 0x0F;                      // pin 4,5,6 은 키패드의 Column(입력)
+	
+
+	PORTD = 0b11110111;                // 1번 Row 선택
+	_delay_us(1);                         // 명령처리 딜레이 타임
+	if ((PIND & 0x10) == 0) input = '1';
+ 198:	81 e3       	ldi	r24, 0x31	; 49
+ 19a:	03 c0       	rjmp	.+6      	; 0x1a2 <Keypad_input+0x2e>
+	else if ((PIND & 0x20) == 0) input = '2';
+ 19c:	82 e3       	ldi	r24, 0x32	; 50
+ 19e:	01 c0       	rjmp	.+2      	; 0x1a2 <Keypad_input+0x2e>
+}
+
+
+char Keypad_input(void)                // 키패드 입력받는 함수
+{
+	unsigned char input=' ';            // 키 패드의 입력값, 초기값은 공백문자
+ 1a0:	80 e2       	ldi	r24, 0x20	; 32
+	if ((PIND & 0x10) == 0) input = '1';
+	else if ((PIND & 0x20) == 0) input = '2';
+	else if ((PIND & 0x40) == 0) input = '3';
+	
+	
+	PORTD = 0b11111011;                // 2번 Row 선택
+ 1a2:	9b ef       	ldi	r25, 0xFB	; 251
+ 1a4:	92 bb       	out	0x12, r25	; 18
+ 1a6:	95 e0       	ldi	r25, 0x05	; 5
+ 1a8:	9a 95       	dec	r25
+ 1aa:	f1 f7       	brne	.-4      	; 0x1a8 <Keypad_input+0x34>
+ 1ac:	00 00       	nop
+	_delay_us(1);
+	if ((PIND & 0x10) == 0) input = '4';
+ 1ae:	84 9b       	sbis	0x10, 4	; 16
+ 1b0:	06 c0       	rjmp	.+12     	; 0x1be <Keypad_input+0x4a>
+	else if ((PIND & 0x20) == 0) input = '5';
+ 1b2:	85 9b       	sbis	0x10, 5	; 16
+ 1b4:	06 c0       	rjmp	.+12     	; 0x1c2 <Keypad_input+0x4e>
+	else if ((PIND & 0x40) == 0) input = '6';
+ 1b6:	86 99       	sbic	0x10, 6	; 16
+ 1b8:	05 c0       	rjmp	.+10     	; 0x1c4 <Keypad_input+0x50>
+ 1ba:	86 e3       	ldi	r24, 0x36	; 54
+ 1bc:	03 c0       	rjmp	.+6      	; 0x1c4 <Keypad_input+0x50>
+	else if ((PIND & 0x40) == 0) input = '3';
+	
+	
+	PORTD = 0b11111011;                // 2번 Row 선택
+	_delay_us(1);
+	if ((PIND & 0x10) == 0) input = '4';
+ 1be:	84 e3       	ldi	r24, 0x34	; 52
+ 1c0:	01 c0       	rjmp	.+2      	; 0x1c4 <Keypad_input+0x50>
+	else if ((PIND & 0x20) == 0) input = '5';
+ 1c2:	85 e3       	ldi	r24, 0x35	; 53
+	else if ((PIND & 0x40) == 0) input = '6';
+	
+	PORTD = 0b11111101;                // 3번 Row 선택
+ 1c4:	9d ef       	ldi	r25, 0xFD	; 253
+ 1c6:	92 bb       	out	0x12, r25	; 18
+ 1c8:	95 e0       	ldi	r25, 0x05	; 5
+ 1ca:	9a 95       	dec	r25
+ 1cc:	f1 f7       	brne	.-4      	; 0x1ca <Keypad_input+0x56>
+ 1ce:	00 00       	nop
+	_delay_us(1);
+	if ((PIND & 0x10) == 0) input = '7';
+ 1d0:	84 9b       	sbis	0x10, 4	; 16
+ 1d2:	06 c0       	rjmp	.+12     	; 0x1e0 <Keypad_input+0x6c>
+	else if ((PIND & 0x20) == 0) input = '8';
+ 1d4:	85 9b       	sbis	0x10, 5	; 16
+ 1d6:	06 c0       	rjmp	.+12     	; 0x1e4 <Keypad_input+0x70>
+	else if ((PIND & 0x40) == 0) input = '9';
+ 1d8:	86 99       	sbic	0x10, 6	; 16
+ 1da:	05 c0       	rjmp	.+10     	; 0x1e6 <Keypad_input+0x72>
+ 1dc:	89 e3       	ldi	r24, 0x39	; 57
+ 1de:	03 c0       	rjmp	.+6      	; 0x1e6 <Keypad_input+0x72>
+	else if ((PIND & 0x20) == 0) input = '5';
+	else if ((PIND & 0x40) == 0) input = '6';
+	
+	PORTD = 0b11111101;                // 3번 Row 선택
+	_delay_us(1);
+	if ((PIND & 0x10) == 0) input = '7';
+ 1e0:	87 e3       	ldi	r24, 0x37	; 55
+ 1e2:	01 c0       	rjmp	.+2      	; 0x1e6 <Keypad_input+0x72>
+	else if ((PIND & 0x20) == 0) input = '8';
+ 1e4:	88 e3       	ldi	r24, 0x38	; 56
+	else if ((PIND & 0x40) == 0) input = '9';
+	
+	PORTD = 0b11111110;                // 4번 Row 선택
+ 1e6:	9e ef       	ldi	r25, 0xFE	; 254
+ 1e8:	92 bb       	out	0x12, r25	; 18
+ 1ea:	95 e0       	ldi	r25, 0x05	; 5
+ 1ec:	9a 95       	dec	r25
+ 1ee:	f1 f7       	brne	.-4      	; 0x1ec <Keypad_input+0x78>
+ 1f0:	00 00       	nop
+	_delay_us(1);
+	if ((PIND & 0x10) == 0) input = '*';
+ 1f2:	84 9b       	sbis	0x10, 4	; 16
+ 1f4:	06 c0       	rjmp	.+12     	; 0x202 <Keypad_input+0x8e>
+	else if ((PIND & 0x20) == 0) input = '0';
+ 1f6:	85 9b       	sbis	0x10, 5	; 16
+ 1f8:	06 c0       	rjmp	.+12     	; 0x206 <Keypad_input+0x92>
+	else if ((PIND & 0x40) == 0) input = '#';
+ 1fa:	86 99       	sbic	0x10, 6	; 16
+ 1fc:	05 c0       	rjmp	.+10     	; 0x208 <Keypad_input+0x94>
+ 1fe:	83 e2       	ldi	r24, 0x23	; 35
+ 200:	03 c0       	rjmp	.+6      	; 0x208 <Keypad_input+0x94>
+	else if ((PIND & 0x20) == 0) input = '8';
+	else if ((PIND & 0x40) == 0) input = '9';
+	
+	PORTD = 0b11111110;                // 4번 Row 선택
+	_delay_us(1);
+	if ((PIND & 0x10) == 0) input = '*';
+ 202:	8a e2       	ldi	r24, 0x2A	; 42
+ 204:	01 c0       	rjmp	.+2      	; 0x208 <Keypad_input+0x94>
+	else if ((PIND & 0x20) == 0) input = '0';
+ 206:	80 e3       	ldi	r24, 0x30	; 48
+	else if ((PIND & 0x40) == 0) input = '#';
+	
+	key_buffer = input;
+ 208:	80 93 84 02 	sts	0x0284, r24	; 0x800284 <__data_end>
+	
+	return input;                    // 입력이 없으면 공백문자 리턴
+}
+ 20c:	08 95       	ret
+
+0000020e <keypad_db_input>:
+unsigned char keypad_db_input(void)        // 키패드 입력 debouncing 함수
+{
+	
+	unsigned char input;                    // 키패드 입력값 변수
+	
+	input = Keypad_input();
+ 20e:	b2 df       	rcall	.-156    	; 0x174 <Keypad_input>
+	
+	if(input == ' ')                           // 키가 아무것도 눌리지 않았을 때(혹은 눌렀다 뗐을 때)
+ 210:	80 32       	cpi	r24, 0x20	; 32
+ 212:	91 f4       	brne	.+36     	; 0x238 <keypad_db_input+0x2a>
+	{
+		if(keypad_press == NO) return input;    // 키가 이전에 눌린 적이 없다면
+ 214:	80 91 0b 01 	lds	r24, 0x010B	; 0x80010b <keypad_press>
+ 218:	82 32       	cpi	r24, 0x22	; 34
+ 21a:	d1 f0       	breq	.+52     	; 0x250 <keypad_db_input+0x42>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 21c:	2f ef       	ldi	r18, 0xFF	; 255
+ 21e:	89 ef       	ldi	r24, 0xF9	; 249
+ 220:	90 e0       	ldi	r25, 0x00	; 0
+ 222:	21 50       	subi	r18, 0x01	; 1
+ 224:	80 40       	sbci	r24, 0x00	; 0
+ 226:	90 40       	sbci	r25, 0x00	; 0
+ 228:	e1 f7       	brne	.-8      	; 0x222 <keypad_db_input+0x14>
+ 22a:	00 c0       	rjmp	.+0      	; 0x22c <keypad_db_input+0x1e>
+ 22c:	00 00       	nop
+		
+		else                                     // 키가 이전에 눌린 적이 있다면
+		{
+			
+			_delay_ms(20);
+			keypad_press = NO;
+ 22e:	82 e2       	ldi	r24, 0x22	; 34
+ 230:	80 93 0b 01 	sts	0x010B, r24	; 0x80010b <keypad_press>
+			return input;
+ 234:	80 e2       	ldi	r24, 0x20	; 32
+ 236:	08 95       	ret
+		}
+	}
+	
+	else                                  // 키가 눌렸을 때
+	{
+		if(keypad_press == YES) return ' ';    // 키가 이전에 눌린 적이 있다면
+ 238:	90 91 0b 01 	lds	r25, 0x010B	; 0x80010b <keypad_press>
+ 23c:	9c 30       	cpi	r25, 0x0C	; 12
+ 23e:	51 f0       	breq	.+20     	; 0x254 <keypad_db_input+0x46>
+		
+		else                                   // 키가 눌린 적이 없다면
+		{
+			if (key_buffer != ' ' ) 
+ 240:	90 91 84 02 	lds	r25, 0x0284	; 0x800284 <__data_end>
+ 244:	90 32       	cpi	r25, 0x20	; 32
+ 246:	39 f0       	breq	.+14     	; 0x256 <keypad_db_input+0x48>
+			keypad_press = YES;
+ 248:	9c e0       	ldi	r25, 0x0C	; 12
+ 24a:	90 93 0b 01 	sts	0x010B, r25	; 0x80010b <keypad_press>
+ 24e:	08 95       	ret
+	
+	input = Keypad_input();
+	
+	if(input == ' ')                           // 키가 아무것도 눌리지 않았을 때(혹은 눌렀다 뗐을 때)
+	{
+		if(keypad_press == NO) return input;    // 키가 이전에 눌린 적이 없다면
+ 250:	80 e2       	ldi	r24, 0x20	; 32
+ 252:	08 95       	ret
+		}
+	}
+	
+	else                                  // 키가 눌렸을 때
+	{
+		if(keypad_press == YES) return ' ';    // 키가 이전에 눌린 적이 있다면
+ 254:	80 e2       	ldi	r24, 0x20	; 32
+			if (key_buffer != ' ' ) 
+			keypad_press = YES;
+			return input;
+		}
+	}
+}
+ 256:	08 95       	ret
+
+00000258 <face_mode>:
+
+void face_mode()	//얼굴 감지모드
+{		
+		
+		
+		value=getchar0();	//UART에서 데이터 받는용도
+ 258:	89 df       	rcall	.-238    	; 0x16c <getchar0>
+ 25a:	80 93 86 02 	sts	0x0286, r24	; 0x800286 <value>
+		
+		
+		if(value=='y')
+ 25e:	89 37       	cpi	r24, 0x79	; 121
+ 260:	91 f4       	brne	.+36     	; 0x286 <face_mode+0x2e>
+		{	
+			
+			LCD_print(0x80,"    Unlocked!   ");               // 1열 문자열 출력
+ 262:	6d e0       	ldi	r22, 0x0D	; 13
+ 264:	71 e0       	ldi	r23, 0x01	; 1
+ 266:	80 e8       	ldi	r24, 0x80	; 128
+ 268:	5f df       	rcall	.-322    	; 0x128 <LCD_print>
+			LCD_print(0xC0,"  Welcome Home! ");
+ 26a:	6e e1       	ldi	r22, 0x1E	; 30
+ 26c:	71 e0       	ldi	r23, 0x01	; 1
+ 26e:	80 ec       	ldi	r24, 0xC0	; 192
+ 270:	5b df       	rcall	.-330    	; 0x128 <LCD_print>
+			PORTG=0x01;
+ 272:	81 e0       	ldi	r24, 0x01	; 1
+ 274:	80 93 65 00 	sts	0x0065, r24	; 0x800065 <__TEXT_REGION_LENGTH__+0x7e0065>
+			OCR3A = 35;		//-90도
+ 278:	83 e2       	ldi	r24, 0x23	; 35
+ 27a:	90 e0       	ldi	r25, 0x00	; 0
+ 27c:	90 93 87 00 	sts	0x0087, r25	; 0x800087 <__TEXT_REGION_LENGTH__+0x7e0087>
+ 280:	80 93 86 00 	sts	0x0086, r24	; 0x800086 <__TEXT_REGION_LENGTH__+0x7e0086>
+ 284:	08 95       	ret
+		}
+		
+		
+		else if(value=='n')
+ 286:	8e 36       	cpi	r24, 0x6E	; 110
+ 288:	91 f4       	brne	.+36     	; 0x2ae <face_mode+0x56>
+		{
+			LCD_print(0x80,"     Locked!    ");               // 1열 문자열 출력
+ 28a:	6f e2       	ldi	r22, 0x2F	; 47
+ 28c:	71 e0       	ldi	r23, 0x01	; 1
+ 28e:	80 e8       	ldi	r24, 0x80	; 128
+ 290:	4b df       	rcall	.-362    	; 0x128 <LCD_print>
+			LCD_print(0xC0," Unknown Person "); 
+ 292:	60 e4       	ldi	r22, 0x40	; 64
+ 294:	71 e0       	ldi	r23, 0x01	; 1
+ 296:	80 ec       	ldi	r24, 0xC0	; 192
+ 298:	47 df       	rcall	.-370    	; 0x128 <LCD_print>
+ 29a:	82 e0       	ldi	r24, 0x02	; 2
+			PORTG=0x02;
+ 29c:	80 93 65 00 	sts	0x0065, r24	; 0x800065 <__TEXT_REGION_LENGTH__+0x7e0065>
+ 2a0:	86 e9       	ldi	r24, 0x96	; 150
+			OCR3A = 150;	//90도
+ 2a2:	90 e0       	ldi	r25, 0x00	; 0
+ 2a4:	90 93 87 00 	sts	0x0087, r25	; 0x800087 <__TEXT_REGION_LENGTH__+0x7e0087>
+ 2a8:	80 93 86 00 	sts	0x0086, r24	; 0x800086 <__TEXT_REGION_LENGTH__+0x7e0086>
+ 2ac:	08 95       	ret
+ 2ae:	86 36       	cpi	r24, 0x66	; 102
+		}
+		else if(value=='f')
+ 2b0:	81 f4       	brne	.+32     	; 0x2d2 <face_mode+0x7a>
+		{		
+			LCD_print(0x80," Face Not Found ");               // 1열 문자열 출력
+ 2b2:	61 e5       	ldi	r22, 0x51	; 81
+ 2b4:	71 e0       	ldi	r23, 0x01	; 1
+ 2b6:	80 e8       	ldi	r24, 0x80	; 128
+ 2b8:	37 df       	rcall	.-402    	; 0x128 <LCD_print>
+			LCD_print(0xC0,"                ");
+ 2ba:	62 e6       	ldi	r22, 0x62	; 98
+ 2bc:	71 e0       	ldi	r23, 0x01	; 1
+ 2be:	80 ec       	ldi	r24, 0xC0	; 192
+ 2c0:	33 df       	rcall	.-410    	; 0x128 <LCD_print>
+ 2c2:	10 92 65 00 	sts	0x0065, r1	; 0x800065 <__TEXT_REGION_LENGTH__+0x7e0065>
+			PORTG=0x00;
+ 2c6:	86 e9       	ldi	r24, 0x96	; 150
+			OCR3A = 150;		//-90도
+ 2c8:	90 e0       	ldi	r25, 0x00	; 0
+ 2ca:	90 93 87 00 	sts	0x0087, r25	; 0x800087 <__TEXT_REGION_LENGTH__+0x7e0087>
+ 2ce:	80 93 86 00 	sts	0x0086, r24	; 0x800086 <__TEXT_REGION_LENGTH__+0x7e0086>
+ 2d2:	08 95       	ret
+
+000002d4 <key_mode>:
+ 2d4:	2f 92       	push	r2
+		}
+		
+}
+
+void key_mode()
+{	
+ 2d6:	3f 92       	push	r3
+ 2d8:	4f 92       	push	r4
+ 2da:	5f 92       	push	r5
+ 2dc:	6f 92       	push	r6
+ 2de:	7f 92       	push	r7
+ 2e0:	8f 92       	push	r8
+ 2e2:	9f 92       	push	r9
+ 2e4:	af 92       	push	r10
+ 2e6:	bf 92       	push	r11
+ 2e8:	cf 92       	push	r12
+ 2ea:	df 92       	push	r13
+ 2ec:	ef 92       	push	r14
+ 2ee:	ff 92       	push	r15
+ 2f0:	0f 93       	push	r16
+ 2f2:	1f 93       	push	r17
+ 2f4:	cf 93       	push	r28
+ 2f6:	df 93       	push	r29
+ 2f8:	1f 92       	push	r1
+ 2fa:	cd b7       	in	r28, 0x3d	; 61
+ 2fc:	de b7       	in	r29, 0x3e	; 62
+	PORTG=0x00;
+ 2fe:	10 92 65 00 	sts	0x0065, r1	; 0x800065 <__TEXT_REGION_LENGTH__+0x7e0065>
+	char number;
+		
+	unsigned int i=0;			//lcd비밀번호 자리수 용도
+ 302:	00 e0       	ldi	r16, 0x00	; 0
+ 304:	10 e0       	ldi	r17, 0x00	; 0
+		LCD_char_print(char_address++, &number);
+		i++;
+		
+		 if(i == 4)                            // 4자리까지 숫자가 입력되면
+		 {		
+			 pwinput = YES;
+ 306:	0f 2e       	mov	r0, r31
+ 308:	fc e0       	ldi	r31, 0x0C	; 12
+ 30a:	ff 2e       	mov	r15, r31
+ 30c:	f0 2d       	mov	r31, r0
+		
+	unsigned int i=0;			//lcd비밀번호 자리수 용도
+	unsigned int a=0;			//새로운 비밀번호 자리수 용도
+	unsigned int cur=0;			//입력한 비밀번호 맞는지 검증용도
+	
+	while(pwinput != YES && userinput_mode !=YES)        // 첫번째 비밀번호 입력이 완료될 때까지 무한루프
+ 30e:	21 c0       	rjmp	.+66     	; 0x352 <key_mode+0x7e>
+	{	
+		LCD_print(0x80,"PassWord:       ");
+ 310:	63 e7       	ldi	r22, 0x73	; 115
+ 312:	71 e0       	ldi	r23, 0x01	; 1
+ 314:	80 e8       	ldi	r24, 0x80	; 128
+ 316:	08 df       	rcall	.-496    	; 0x128 <LCD_print>
+		number = keypad_db_input();
+ 318:	7a df       	rcall	.-268    	; 0x20e <keypad_db_input>
+ 31a:	89 83       	std	Y+1, r24	; 0x01
+ 31c:	80 32       	cpi	r24, 0x20	; 32
+		
+		
+	if (number == ' ') continue;// 입력이 없으면 Continue 
+ 31e:	c9 f0       	breq	.+50     	; 0x352 <key_mode+0x7e>
+ 320:	8a 32       	cpi	r24, 0x2A	; 42
+	
+			
+		
+	else if(number != '*' && number != '#')        // 숫자를 누르면
+ 322:	b9 f0       	breq	.+46     	; 0x352 <key_mode+0x7e>
+ 324:	83 32       	cpi	r24, 0x23	; 35
+ 326:	a9 f0       	breq	.+42     	; 0x352 <key_mode+0x7e>
+ 328:	f8 01       	movw	r30, r16
+	{	
+		pw[i] = number;                    // 배열에 입력된 숫자 저장		     	
+ 32a:	ef 5f       	subi	r30, 0xFF	; 255
+ 32c:	fe 4f       	sbci	r31, 0xFE	; 254
+ 32e:	80 83       	st	Z, r24
+ 330:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <char_address>
+		LCD_char_print(char_address++, &number);
+ 334:	91 e0       	ldi	r25, 0x01	; 1
+ 336:	98 0f       	add	r25, r24
+ 338:	90 93 0c 01 	sts	0x010C, r25	; 0x80010c <char_address>
+ 33c:	be 01       	movw	r22, r28
+ 33e:	6f 5f       	subi	r22, 0xFF	; 255
+ 340:	7f 4f       	sbci	r23, 0xFF	; 255
+ 342:	01 df       	rcall	.-510    	; 0x146 <LCD_char_print>
+ 344:	0f 5f       	subi	r16, 0xFF	; 255
+		i++;
+ 346:	1f 4f       	sbci	r17, 0xFF	; 255
+ 348:	04 30       	cpi	r16, 0x04	; 4
+		
+		 if(i == 4)                            // 4자리까지 숫자가 입력되면
+ 34a:	11 05       	cpc	r17, r1
+ 34c:	11 f4       	brne	.+4      	; 0x352 <key_mode+0x7e>
+ 34e:	f0 92 0a 01 	sts	0x010A, r15	; 0x80010a <pwinput>
+		 {		
+			 pwinput = YES;
+ 352:	80 91 0a 01 	lds	r24, 0x010A	; 0x80010a <pwinput>
+		
+	unsigned int i=0;			//lcd비밀번호 자리수 용도
+	unsigned int a=0;			//새로운 비밀번호 자리수 용도
+	unsigned int cur=0;			//입력한 비밀번호 맞는지 검증용도
+	
+	while(pwinput != YES && userinput_mode !=YES)        // 첫번째 비밀번호 입력이 완료될 때까지 무한루프
+ 356:	8c 30       	cpi	r24, 0x0C	; 12
+ 358:	09 f4       	brne	.+2      	; 0x35c <key_mode+0x88>
+ 35a:	c0 c0       	rjmp	.+384    	; 0x4dc <__LOCK_REGION_LENGTH__+0xdc>
+ 35c:	80 91 09 01 	lds	r24, 0x0109	; 0x800109 <userinput_mode>
+ 360:	8c 30       	cpi	r24, 0x0C	; 12
+ 362:	b1 f6       	brne	.-84     	; 0x310 <key_mode+0x3c>
+ 364:	e1 2c       	mov	r14, r1
+ 366:	f1 2c       	mov	r15, r1
+ 368:	bb c0       	rjmp	.+374    	; 0x4e0 <__LOCK_REGION_LENGTH__+0xe0>
+	}
+	
+	while(pwinput != NO && userinput_mode !=YES) 
+	{		
+		
+		number = keypad_db_input();		
+ 36a:	51 df       	rcall	.-350    	; 0x20e <keypad_db_input>
+ 36c:	89 83       	std	Y+1, r24	; 0x01
+ 36e:	83 32       	cpi	r24, 0x23	; 35
+		
+		if(number=='#'&& pwinput == YES)
+ 370:	09 f0       	breq	.+2      	; 0x374 <key_mode+0xa0>
+ 372:	5d c0       	rjmp	.+186    	; 0x42e <__LOCK_REGION_LENGTH__+0x2e>
+ 374:	80 91 0a 01 	lds	r24, 0x010A	; 0x80010a <pwinput>
+ 378:	8c 30       	cpi	r24, 0x0C	; 12
+ 37a:	09 f0       	breq	.+2      	; 0x37e <key_mode+0xaa>
+ 37c:	a5 c0       	rjmp	.+330    	; 0x4c8 <__LOCK_REGION_LENGTH__+0xc8>
+ 37e:	e5 e0       	ldi	r30, 0x05	; 5
+ 380:	f1 e0       	ldi	r31, 0x01	; 1
+ 382:	a1 e0       	ldi	r26, 0x01	; 1
+ 384:	b1 e0       	ldi	r27, 0x01	; 1
+ 386:	91 91       	ld	r25, Z+
+		{
+	
+			for(int j=0; j<4 ;j++)
+			{
+				if(operand[j]==pw[j]) cur++;			
+ 388:	8d 91       	ld	r24, X+
+ 38a:	98 13       	cpse	r25, r24
+ 38c:	03 c0       	rjmp	.+6      	; 0x394 <key_mode+0xc0>
+ 38e:	2f ef       	ldi	r18, 0xFF	; 255
+ 390:	e2 1a       	sub	r14, r18
+ 392:	f2 0a       	sbc	r15, r18
+ 394:	e0 17       	cp	r30, r16
+		number = keypad_db_input();		
+		
+		if(number=='#'&& pwinput == YES)
+		{
+	
+			for(int j=0; j<4 ;j++)
+ 396:	f1 07       	cpc	r31, r17
+ 398:	b1 f7       	brne	.-20     	; 0x386 <key_mode+0xb2>
+ 39a:	84 e0       	ldi	r24, 0x04	; 4
+			{
+				if(operand[j]==pw[j]) cur++;			
+			}
+			
+			if(cur==4)				//위의 비밀번호 숫자가 다맞으면 CUR이 4까지 옴
+ 39c:	e8 16       	cp	r14, r24
+ 39e:	f1 04       	cpc	r15, r1
+ 3a0:	29 f5       	brne	.+74     	; 0x3ec <key_mode+0x118>
+			{
+				LCD_print(0x80,"    Unlocked!   ");               // 1열 문자열 출력
+ 3a2:	6d e0       	ldi	r22, 0x0D	; 13
+ 3a4:	71 e0       	ldi	r23, 0x01	; 1
+ 3a6:	80 e8       	ldi	r24, 0x80	; 128
+ 3a8:	bf de       	rcall	.-642    	; 0x128 <LCD_print>
+				LCD_print(0xC0,"  Welcome Home! ");
+ 3aa:	6e e1       	ldi	r22, 0x1E	; 30
+ 3ac:	71 e0       	ldi	r23, 0x01	; 1
+ 3ae:	85 2d       	mov	r24, r5
+ 3b0:	bb de       	rcall	.-650    	; 0x128 <LCD_print>
+ 3b2:	81 e0       	ldi	r24, 0x01	; 1
+				PORTG=0x01;
+ 3b4:	f6 01       	movw	r30, r12
+ 3b6:	80 83       	st	Z, r24
+ 3b8:	f5 01       	movw	r30, r10
+				OCR3A = 35;		//-90도
+ 3ba:	71 82       	std	Z+1, r7	; 0x01
+ 3bc:	60 82       	st	Z, r6
+ 3be:	ff ef       	ldi	r31, 0xFF	; 255
+ 3c0:	2b e7       	ldi	r18, 0x7B	; 123
+ 3c2:	82 e9       	ldi	r24, 0x92	; 146
+ 3c4:	f1 50       	subi	r31, 0x01	; 1
+ 3c6:	20 40       	sbci	r18, 0x00	; 0
+ 3c8:	80 40       	sbci	r24, 0x00	; 0
+ 3ca:	e1 f7       	brne	.-8      	; 0x3c4 <key_mode+0xf0>
+ 3cc:	00 c0       	rjmp	.+0      	; 0x3ce <key_mode+0xfa>
+ 3ce:	00 00       	nop
+				_delay_ms(3000);
+				
+				LCD_cmd(0x01);                    // Clear display
+ 3d0:	81 e0       	ldi	r24, 0x01	; 1
+ 3d2:	7a de       	rcall	.-780    	; 0xc8 <LCD_cmd>
+ 3d4:	f6 01       	movw	r30, r12
+				PORTG=0x00;							//LED 끄고
+ 3d6:	10 82       	st	Z, r1
+ 3d8:	40 92 0a 01 	sts	0x010A, r4	; 0x80010a <pwinput>
+				pwinput = NO;				//비밀번호 다시입력 상태로 돌아가기
+ 3dc:	50 92 0c 01 	sts	0x010C, r5	; 0x80010c <char_address>
+				char_address = 0xC0;				//LCD 글자위치 초기화
+ 3e0:	f5 01       	movw	r30, r10
+				cur=0;							
+				OCR3A = 150;
+ 3e2:	91 82       	std	Z+1, r9	; 0x01
+ 3e4:	80 82       	st	Z, r8
+				
+				LCD_cmd(0x01);                    // Clear display
+				PORTG=0x00;							//LED 끄고
+				pwinput = NO;				//비밀번호 다시입력 상태로 돌아가기
+				char_address = 0xC0;				//LCD 글자위치 초기화
+				cur=0;							
+ 3e6:	e1 2c       	mov	r14, r1
+ 3e8:	f1 2c       	mov	r15, r1
+ 3ea:	9f c0       	rjmp	.+318    	; 0x52a <__LOCK_REGION_LENGTH__+0x12a>
+				OCR3A = 150;
+			}
+			
+			else   //	비밀번호 틀릴시
+			{
+				LCD_print(0x80,"     Locked!    ");               // 1열 문자열 출력
+ 3ec:	6f e2       	ldi	r22, 0x2F	; 47
+ 3ee:	71 e0       	ldi	r23, 0x01	; 1
+ 3f0:	80 e8       	ldi	r24, 0x80	; 128
+ 3f2:	9a de       	rcall	.-716    	; 0x128 <LCD_print>
+				LCD_print(0xC0," Unknown Person ");
+ 3f4:	60 e4       	ldi	r22, 0x40	; 64
+ 3f6:	71 e0       	ldi	r23, 0x01	; 1
+ 3f8:	85 2d       	mov	r24, r5
+ 3fa:	96 de       	rcall	.-724    	; 0x128 <LCD_print>
+ 3fc:	f6 01       	movw	r30, r12
+				PORTG=0x02;
+ 3fe:	20 82       	st	Z, r2
+ 400:	f5 01       	movw	r30, r10
+				OCR3A = 150;	//90도
+ 402:	91 82       	std	Z+1, r9	; 0x01
+ 404:	80 82       	st	Z, r8
+ 406:	ff ef       	ldi	r31, 0xFF	; 255
+ 408:	2b e7       	ldi	r18, 0x7B	; 123
+ 40a:	82 e9       	ldi	r24, 0x92	; 146
+ 40c:	f1 50       	subi	r31, 0x01	; 1
+ 40e:	20 40       	sbci	r18, 0x00	; 0
+ 410:	80 40       	sbci	r24, 0x00	; 0
+ 412:	e1 f7       	brne	.-8      	; 0x40c <__LOCK_REGION_LENGTH__+0xc>
+ 414:	00 c0       	rjmp	.+0      	; 0x416 <__LOCK_REGION_LENGTH__+0x16>
+ 416:	00 00       	nop
+				_delay_ms(3000);
+				
+				LCD_cmd(0x01);                    // Clear display
+ 418:	81 e0       	ldi	r24, 0x01	; 1
+ 41a:	56 de       	rcall	.-852    	; 0xc8 <LCD_cmd>
+ 41c:	f6 01       	movw	r30, r12
+				PORTG=0x00;							//LED 끄고
+ 41e:	10 82       	st	Z, r1
+ 420:	40 92 0a 01 	sts	0x010A, r4	; 0x80010a <pwinput>
+				pwinput = NO;				//비밀번호 다시입력 상태로 돌아가기
+ 424:	50 92 0c 01 	sts	0x010C, r5	; 0x80010c <char_address>
+				char_address = 0xC0;				//LCD 글자위치 초기화
+ 428:	e1 2c       	mov	r14, r1
+				cur=0;								//CUR는 다시 0으로
+ 42a:	f1 2c       	mov	r15, r1
+ 42c:	7e c0       	rjmp	.+252    	; 0x52a <__LOCK_REGION_LENGTH__+0x12a>
+ 42e:	8a 32       	cpi	r24, 0x2A	; 42
+			}
+			
+		}
+		
+		else if(number == '*' && pwinput == YES)        // 별표를 숫자를 누르면(비번바꾸기) 비빌번호를 입력해야 비밀번호 변경모드로 들어옴
+ 430:	09 f0       	breq	.+2      	; 0x434 <__LOCK_REGION_LENGTH__+0x34>
+ 432:	4a c0       	rjmp	.+148    	; 0x4c8 <__LOCK_REGION_LENGTH__+0xc8>
+ 434:	80 91 0a 01 	lds	r24, 0x010A	; 0x80010a <pwinput>
+ 438:	8c 30       	cpi	r24, 0x0C	; 12
+ 43a:	09 f0       	breq	.+2      	; 0x43e <__LOCK_REGION_LENGTH__+0x3e>
+ 43c:	45 c0       	rjmp	.+138    	; 0x4c8 <__LOCK_REGION_LENGTH__+0xc8>
+ 43e:	e5 e0       	ldi	r30, 0x05	; 5
+ 440:	f1 e0       	ldi	r31, 0x01	; 1
+ 442:	a1 e0       	ldi	r26, 0x01	; 1
+ 444:	b1 e0       	ldi	r27, 0x01	; 1
+ 446:	91 91       	ld	r25, Z+
+		{
+			for(int j=0; j<4 ;j++)
+			{
+				if(operand[j]==pw[j]) cur++;
+ 448:	8d 91       	ld	r24, X+
+ 44a:	98 13       	cpse	r25, r24
+ 44c:	03 c0       	rjmp	.+6      	; 0x454 <__LOCK_REGION_LENGTH__+0x54>
+ 44e:	2f ef       	ldi	r18, 0xFF	; 255
+ 450:	e2 1a       	sub	r14, r18
+ 452:	f2 0a       	sbc	r15, r18
+ 454:	e0 17       	cp	r30, r16
+			
+		}
+		
+		else if(number == '*' && pwinput == YES)        // 별표를 숫자를 누르면(비번바꾸기) 비빌번호를 입력해야 비밀번호 변경모드로 들어옴
+		{
+			for(int j=0; j<4 ;j++)
+ 456:	f1 07       	cpc	r31, r17
+ 458:	b1 f7       	brne	.-20     	; 0x446 <__LOCK_REGION_LENGTH__+0x46>
+			{
+				if(operand[j]==pw[j]) cur++;
+			}
+			
+			if(cur==4)				//위의 비밀번호 숫자가 다맞으면 CUR이 4까지 옴
+ 45a:	84 e0       	ldi	r24, 0x04	; 4
+ 45c:	e8 16       	cp	r14, r24
+ 45e:	f1 04       	cpc	r15, r1
+			{	
+				LCD_print(0x80,"    PASSWORD    ");               // 1열 문자열 출력
+ 460:	d9 f4       	brne	.+54     	; 0x498 <__LOCK_REGION_LENGTH__+0x98>
+ 462:	64 e8       	ldi	r22, 0x84	; 132
+ 464:	71 e0       	ldi	r23, 0x01	; 1
+ 466:	80 e8       	ldi	r24, 0x80	; 128
+ 468:	5f de       	rcall	.-834    	; 0x128 <LCD_print>
+				LCD_print(0xC0,"  CHANGE MODE ! ");
+ 46a:	65 e9       	ldi	r22, 0x95	; 149
+ 46c:	71 e0       	ldi	r23, 0x01	; 1
+ 46e:	85 2d       	mov	r24, r5
+ 470:	5b de       	rcall	.-842    	; 0x128 <LCD_print>
+ 472:	9f ef       	ldi	r25, 0xFF	; 255
+ 474:	eb e7       	ldi	r30, 0x7B	; 123
+ 476:	f2 e9       	ldi	r31, 0x92	; 146
+ 478:	91 50       	subi	r25, 0x01	; 1
+ 47a:	e0 40       	sbci	r30, 0x00	; 0
+ 47c:	f0 40       	sbci	r31, 0x00	; 0
+ 47e:	e1 f7       	brne	.-8      	; 0x478 <__LOCK_REGION_LENGTH__+0x78>
+ 480:	00 c0       	rjmp	.+0      	; 0x482 <__LOCK_REGION_LENGTH__+0x82>
+ 482:	00 00       	nop
+				_delay_ms(3000);
+				LCD_cmd(0x01);
+ 484:	81 e0       	ldi	r24, 0x01	; 1
+ 486:	20 de       	rcall	.-960    	; 0xc8 <LCD_cmd>
+				char_address = 0xC0;	
+ 488:	50 92 0c 01 	sts	0x010C, r5	; 0x80010c <char_address>
+				userinput_mode = YES;
+ 48c:	2c e0       	ldi	r18, 0x0C	; 12
+ 48e:	20 93 09 01 	sts	0x0109, r18	; 0x800109 <userinput_mode>
+				pwinput = NO;	
+ 492:	40 92 0a 01 	sts	0x010A, r4	; 0x80010a <pwinput>
+			}
+			
+			else
+			{
+				LCD_print(0x80,"  Wrong Number  ");               // 틀린번호를 입력하면(비밀번호 수정모드로 진입전)
+ 496:	49 c0       	rjmp	.+146    	; 0x52a <__LOCK_REGION_LENGTH__+0x12a>
+ 498:	66 ea       	ldi	r22, 0xA6	; 166
+ 49a:	71 e0       	ldi	r23, 0x01	; 1
+ 49c:	80 e8       	ldi	r24, 0x80	; 128
+ 49e:	44 de       	rcall	.-888    	; 0x128 <LCD_print>
+				LCD_print(0xC0,"  Try Again   ! ");
+ 4a0:	67 eb       	ldi	r22, 0xB7	; 183
+ 4a2:	71 e0       	ldi	r23, 0x01	; 1
+ 4a4:	85 2d       	mov	r24, r5
+ 4a6:	40 de       	rcall	.-896    	; 0x128 <LCD_print>
+ 4a8:	8f ef       	ldi	r24, 0xFF	; 255
+ 4aa:	9b e7       	ldi	r25, 0x7B	; 123
+ 4ac:	e2 e9       	ldi	r30, 0x92	; 146
+ 4ae:	81 50       	subi	r24, 0x01	; 1
+ 4b0:	90 40       	sbci	r25, 0x00	; 0
+ 4b2:	e0 40       	sbci	r30, 0x00	; 0
+ 4b4:	e1 f7       	brne	.-8      	; 0x4ae <__LOCK_REGION_LENGTH__+0xae>
+ 4b6:	00 c0       	rjmp	.+0      	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+ 4b8:	00 00       	nop
+				_delay_ms(3000);
+				LCD_cmd(0x01);
+ 4ba:	81 e0       	ldi	r24, 0x01	; 1
+ 4bc:	05 de       	rcall	.-1014   	; 0xc8 <LCD_cmd>
+ 4be:	50 92 0c 01 	sts	0x010C, r5	; 0x80010c <char_address>
+				char_address = 0xC0;	
+ 4c2:	40 92 0a 01 	sts	0x010A, r4	; 0x80010a <pwinput>
+				pwinput = NO;									//다시 비밀번호 입력초기로 돌아옴							
+ 4c6:	31 c0       	rjmp	.+98     	; 0x52a <__LOCK_REGION_LENGTH__+0x12a>
+ 4c8:	00 99       	sbic	0x00, 0	; 0
+			}
+			
+			
+		}
+		
+			else if((PINF&0x01)==0)
+ 4ca:	2f c0       	rjmp	.+94     	; 0x52a <__LOCK_REGION_LENGTH__+0x12a>
+ 4cc:	38 ba       	out	0x18, r3	; 24
+			{
+				PORTB=0xF0;
+ 4ce:	40 92 0a 01 	sts	0x010A, r4	; 0x80010a <pwinput>
+				pwinput = NO;
+ 4d2:	50 92 0c 01 	sts	0x010C, r5	; 0x80010c <char_address>
+				char_address = 0xC0;				//LCD 글자위치 초기화
+ 4d6:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__DATA_REGION_ORIGIN__>
+				mode=facial_mode;
+ 4da:	27 c0       	rjmp	.+78     	; 0x52a <__LOCK_REGION_LENGTH__+0x12a>
+ 4dc:	e1 2c       	mov	r14, r1
+ 4de:	f1 2c       	mov	r15, r1
+ 4e0:	0f 2e       	mov	r0, r31
+			
+		}
+		
+			else if((PINF&0x01)==0)
+			{
+				PORTB=0xF0;
+ 4e2:	f0 ef       	ldi	r31, 0xF0	; 240
+ 4e4:	3f 2e       	mov	r3, r31
+ 4e6:	f0 2d       	mov	r31, r0
+ 4e8:	0f 2e       	mov	r0, r31
+				pwinput = NO;
+ 4ea:	f2 e2       	ldi	r31, 0x22	; 34
+ 4ec:	4f 2e       	mov	r4, r31
+ 4ee:	f0 2d       	mov	r31, r0
+ 4f0:	0f 2e       	mov	r0, r31
+				char_address = 0xC0;				//LCD 글자위치 초기화
+ 4f2:	f0 ec       	ldi	r31, 0xC0	; 192
+ 4f4:	5f 2e       	mov	r5, r31
+ 4f6:	f0 2d       	mov	r31, r0
+ 4f8:	09 e0       	ldi	r16, 0x09	; 9
+ 4fa:	11 e0       	ldi	r17, 0x01	; 1
+ 4fc:	0f 2e       	mov	r0, r31
+			
+			else   //	비밀번호 틀릴시
+			{
+				LCD_print(0x80,"     Locked!    ");               // 1열 문자열 출력
+				LCD_print(0xC0," Unknown Person ");
+				PORTG=0x02;
+ 4fe:	f5 e6       	ldi	r31, 0x65	; 101
+ 500:	cf 2e       	mov	r12, r31
+ 502:	d1 2c       	mov	r13, r1
+ 504:	f0 2d       	mov	r31, r0
+ 506:	68 94       	set
+ 508:	22 24       	eor	r2, r2
+ 50a:	21 f8       	bld	r2, 1
+ 50c:	0f 2e       	mov	r0, r31
+				OCR3A = 150;	//90도
+ 50e:	f6 e8       	ldi	r31, 0x86	; 134
+ 510:	af 2e       	mov	r10, r31
+ 512:	b1 2c       	mov	r11, r1
+ 514:	f0 2d       	mov	r31, r0
+ 516:	0f 2e       	mov	r0, r31
+ 518:	f6 e9       	ldi	r31, 0x96	; 150
+ 51a:	8f 2e       	mov	r8, r31
+ 51c:	91 2c       	mov	r9, r1
+ 51e:	f0 2d       	mov	r31, r0
+ 520:	0f 2e       	mov	r0, r31
+			if(cur==4)				//위의 비밀번호 숫자가 다맞으면 CUR이 4까지 옴
+			{
+				LCD_print(0x80,"    Unlocked!   ");               // 1열 문자열 출력
+				LCD_print(0xC0,"  Welcome Home! ");
+				PORTG=0x01;
+				OCR3A = 35;		//-90도
+ 522:	f3 e2       	ldi	r31, 0x23	; 35
+ 524:	6f 2e       	mov	r6, r31
+ 526:	71 2c       	mov	r7, r1
+ 528:	f0 2d       	mov	r31, r0
+ 52a:	80 91 0a 01 	lds	r24, 0x010A	; 0x80010a <pwinput>
+	
+	
+			
+	}
+	
+	while(pwinput != NO && userinput_mode !=YES) 
+ 52e:	82 32       	cpi	r24, 0x22	; 34
+ 530:	09 f4       	brne	.+2      	; 0x534 <__LOCK_REGION_LENGTH__+0x134>
+ 532:	42 c0       	rjmp	.+132    	; 0x5b8 <__LOCK_REGION_LENGTH__+0x1b8>
+ 534:	80 91 09 01 	lds	r24, 0x0109	; 0x800109 <userinput_mode>
+ 538:	8c 30       	cpi	r24, 0x0C	; 12
+ 53a:	09 f0       	breq	.+2      	; 0x53e <__LOCK_REGION_LENGTH__+0x13e>
+ 53c:	16 cf       	rjmp	.-468    	; 0x36a <key_mode+0x96>
+ 53e:	00 e0       	ldi	r16, 0x00	; 0
+ 540:	10 e0       	ldi	r17, 0x00	; 0
+	}
+	
+	while (userinput_mode!=NO && pwinput == NO)			//비밀번호 변경모드
+	
+	{	
+		LCD_print(0x80,"New_PassWord:   ");	
+ 542:	3c c0       	rjmp	.+120    	; 0x5bc <__LOCK_REGION_LENGTH__+0x1bc>
+ 544:	68 ec       	ldi	r22, 0xC8	; 200
+ 546:	71 e0       	ldi	r23, 0x01	; 1
+ 548:	80 e8       	ldi	r24, 0x80	; 128
+ 54a:	ee dd       	rcall	.-1060   	; 0x128 <LCD_print>
+		number = keypad_db_input();
+ 54c:	60 de       	rcall	.-832    	; 0x20e <keypad_db_input>
+ 54e:	89 83       	std	Y+1, r24	; 0x01
+ 550:	80 32       	cpi	r24, 0x20	; 32
+		
+		if (number == ' ') continue;// 입력이 없으면 Continue
+ 552:	c1 f1       	breq	.+112    	; 0x5c4 <__LOCK_REGION_LENGTH__+0x1c4>
+		
+		else if(number != '*' && number != '#')
+ 554:	8a 32       	cpi	r24, 0x2A	; 42
+ 556:	b1 f1       	breq	.+108    	; 0x5c4 <__LOCK_REGION_LENGTH__+0x1c4>
+ 558:	83 32       	cpi	r24, 0x23	; 35
+ 55a:	a1 f1       	breq	.+104    	; 0x5c4 <__LOCK_REGION_LENGTH__+0x1c4>
+		{
+		operand[a] = number;                    // 새로운 비밀번호 숫자 저장
+ 55c:	f8 01       	movw	r30, r16
+ 55e:	eb 5f       	subi	r30, 0xFB	; 251
+ 560:	fe 4f       	sbci	r31, 0xFE	; 254
+ 562:	80 83       	st	Z, r24
+		LCD_char_print(char_address++, &number);
+ 564:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <char_address>
+ 568:	91 e0       	ldi	r25, 0x01	; 1
+ 56a:	98 0f       	add	r25, r24
+ 56c:	90 93 0c 01 	sts	0x010C, r25	; 0x80010c <char_address>
+ 570:	be 01       	movw	r22, r28
+ 572:	6f 5f       	subi	r22, 0xFF	; 255
+ 574:	7f 4f       	sbci	r23, 0xFF	; 255
+		a++;
+ 576:	e7 dd       	rcall	.-1074   	; 0x146 <LCD_char_print>
+ 578:	0f 5f       	subi	r16, 0xFF	; 255
+		
+		if(a == 4)                            // 4자리까지 숫자가 입력되면
+ 57a:	1f 4f       	sbci	r17, 0xFF	; 255
+ 57c:	04 30       	cpi	r16, 0x04	; 4
+		{	
+			LCD_print(0x80,"Please Wait Now ");         
+ 57e:	11 05       	cpc	r17, r1
+ 580:	09 f5       	brne	.+66     	; 0x5c4 <__LOCK_REGION_LENGTH__+0x1c4>
+ 582:	69 ed       	ldi	r22, 0xD9	; 217
+ 584:	71 e0       	ldi	r23, 0x01	; 1
+ 586:	80 e8       	ldi	r24, 0x80	; 128
+			LCD_print(0xC0,"Saving Pw_number");
+ 588:	cf dd       	rcall	.-1122   	; 0x128 <LCD_print>
+ 58a:	6a ee       	ldi	r22, 0xEA	; 234
+ 58c:	71 e0       	ldi	r23, 0x01	; 1
+ 58e:	80 ec       	ldi	r24, 0xC0	; 192
+ 590:	cb dd       	rcall	.-1130   	; 0x128 <LCD_print>
+ 592:	ff ef       	ldi	r31, 0xFF	; 255
+ 594:	23 e2       	ldi	r18, 0x23	; 35
+ 596:	84 ef       	ldi	r24, 0xF4	; 244
+ 598:	f1 50       	subi	r31, 0x01	; 1
+ 59a:	20 40       	sbci	r18, 0x00	; 0
+ 59c:	80 40       	sbci	r24, 0x00	; 0
+ 59e:	e1 f7       	brne	.-8      	; 0x598 <__LOCK_REGION_LENGTH__+0x198>
+ 5a0:	00 c0       	rjmp	.+0      	; 0x5a2 <__LOCK_REGION_LENGTH__+0x1a2>
+ 5a2:	00 00       	nop
+			_delay_ms(5000);
+			LCD_cmd(0x01);
+ 5a4:	81 e0       	ldi	r24, 0x01	; 1
+ 5a6:	90 dd       	rcall	.-1248   	; 0xc8 <LCD_cmd>
+ 5a8:	80 ec       	ldi	r24, 0xC0	; 192
+			char_address = 0xC0;
+ 5aa:	80 93 0c 01 	sts	0x010C, r24	; 0x80010c <char_address>
+ 5ae:	f0 92 09 01 	sts	0x0109, r15	; 0x800109 <userinput_mode>
+			userinput_mode=NO;	//비밀번호 변경모드
+ 5b2:	f0 92 0a 01 	sts	0x010A, r15	; 0x80010a <pwinput>
+			pwinput=NO;	//다시 잠금해제 모드로
+ 5b6:	06 c0       	rjmp	.+12     	; 0x5c4 <__LOCK_REGION_LENGTH__+0x1c4>
+ 5b8:	00 e0       	ldi	r16, 0x00	; 0
+ 5ba:	10 e0       	ldi	r17, 0x00	; 0
+ 5bc:	0f 2e       	mov	r0, r31
+			LCD_print(0x80,"Please Wait Now ");         
+			LCD_print(0xC0,"Saving Pw_number");
+			_delay_ms(5000);
+			LCD_cmd(0x01);
+			char_address = 0xC0;
+			userinput_mode=NO;	//비밀번호 변경모드
+ 5be:	f2 e2       	ldi	r31, 0x22	; 34
+ 5c0:	ff 2e       	mov	r15, r31
+ 5c2:	f0 2d       	mov	r31, r0
+ 5c4:	80 91 09 01 	lds	r24, 0x0109	; 0x800109 <userinput_mode>
+			}
+		
+		
+	}
+	
+	while (userinput_mode!=NO && pwinput == NO)			//비밀번호 변경모드
+ 5c8:	82 32       	cpi	r24, 0x22	; 34
+ 5ca:	29 f0       	breq	.+10     	; 0x5d6 <__LOCK_REGION_LENGTH__+0x1d6>
+ 5cc:	80 91 0a 01 	lds	r24, 0x010A	; 0x80010a <pwinput>
+ 5d0:	82 32       	cpi	r24, 0x22	; 34
+ 5d2:	09 f4       	brne	.+2      	; 0x5d6 <__LOCK_REGION_LENGTH__+0x1d6>
+ 5d4:	b7 cf       	rjmp	.-146    	; 0x544 <__LOCK_REGION_LENGTH__+0x144>
+ 5d6:	0f 90       	pop	r0
+	}
+
+	
+	
+	
+}
+ 5d8:	df 91       	pop	r29
+ 5da:	cf 91       	pop	r28
+ 5dc:	1f 91       	pop	r17
+ 5de:	0f 91       	pop	r16
+ 5e0:	ff 90       	pop	r15
+ 5e2:	ef 90       	pop	r14
+ 5e4:	df 90       	pop	r13
+ 5e6:	cf 90       	pop	r12
+ 5e8:	bf 90       	pop	r11
+ 5ea:	af 90       	pop	r10
+ 5ec:	9f 90       	pop	r9
+ 5ee:	8f 90       	pop	r8
+ 5f0:	7f 90       	pop	r7
+ 5f2:	6f 90       	pop	r6
+ 5f4:	5f 90       	pop	r5
+ 5f6:	4f 90       	pop	r4
+ 5f8:	3f 90       	pop	r3
+ 5fa:	2f 90       	pop	r2
+ 5fc:	08 95       	ret
+
+000005fe <main>:
+ 5fe:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__TEXT_REGION_LENGTH__+0x7e0061>
+
+
+int main(void)
+{	
+	DDRF=0x00;		    //모드선택 버튼
+	DDRB=0xFF;			//모드상태 LED
+ 602:	8f ef       	ldi	r24, 0xFF	; 255
+ 604:	87 bb       	out	0x17, r24	; 23
+	PORTB=0x00;			//모드상태 LED 초기상태
+ 606:	18 ba       	out	0x18, r1	; 24
+	
+	DDRD = 0x0F;                    // pin 0,1,2,3 은 키패드의 Row(출력)
+ 608:	9f e0       	ldi	r25, 0x0F	; 15
+ 60a:	91 bb       	out	0x11, r25	; 17
+	PORTD = 0xFF;                   // pin 4,5,6 은 키패드의 Column(입력)
+ 60c:	82 bb       	out	0x12, r24	; 18
+	
+	DDRG=0x0F;	// 도어락확인 LED
+ 60e:	90 93 64 00 	sts	0x0064, r25	; 0x800064 <__TEXT_REGION_LENGTH__+0x7e0064>
+	PORTG=0x00;
+ 612:	10 92 65 00 	sts	0x0065, r1	; 0x800065 <__TEXT_REGION_LENGTH__+0x7e0065>
+	
+	
+	LCD_DB_DDR = 0xFF;                // LCD data bus, LCD command port 출력모드
+ 616:	8a bb       	out	0x1a, r24	; 26
+	LCD_CMD_DDR = 0xFF;
+ 618:	84 bb       	out	0x14, r24	; 20
+	LCD_DB_PORT = 0x00;
+ 61a:	1b ba       	out	0x1b, r1	; 27
+	LCD_CMD_PORT = 0x00;
+ 61c:	15 ba       	out	0x15, r1	; 21
+	
+	DDRE |= (1<<3);
+ 61e:	13 9a       	sbi	0x02, 3	; 2
+	TCCR3A |= (1<<COM3A1) | (1<<WGM31);
+ 620:	eb e8       	ldi	r30, 0x8B	; 139
+ 622:	f0 e0       	ldi	r31, 0x00	; 0
+ 624:	80 81       	ld	r24, Z
+ 626:	82 68       	ori	r24, 0x82	; 130
+ 628:	80 83       	st	Z, r24
+	TCCR3B |= (1<<WGM33) | (1<<WGM32) | (1<<CS32);
+ 62a:	ea e8       	ldi	r30, 0x8A	; 138
+ 62c:	f0 e0       	ldi	r31, 0x00	; 0
+ 62e:	80 81       	ld	r24, Z
+ 630:	8c 61       	ori	r24, 0x1C	; 28
+ 632:	80 83       	st	Z, r24
+	ICR3 = 1250;
+ 634:	82 ee       	ldi	r24, 0xE2	; 226
+ 636:	94 e0       	ldi	r25, 0x04	; 4
+ 638:	90 93 81 00 	sts	0x0081, r25	; 0x800081 <__TEXT_REGION_LENGTH__+0x7e0081>
+ 63c:	80 93 80 00 	sts	0x0080, r24	; 0x800080 <__TEXT_REGION_LENGTH__+0x7e0080>
+	OCR3A = 150;
+ 640:	86 e9       	ldi	r24, 0x96	; 150
+ 642:	90 e0       	ldi	r25, 0x00	; 0
+ 644:	90 93 87 00 	sts	0x0087, r25	; 0x800087 <__TEXT_REGION_LENGTH__+0x7e0087>
+ 648:	80 93 86 00 	sts	0x0086, r24	; 0x800086 <__TEXT_REGION_LENGTH__+0x7e0086>
+	
+	LCD_init();
+ 64c:	4d dd       	rcall	.-1382   	; 0xe8 <LCD_init>
+	init_uart0();	//UART시작
+ 64e:	84 dd       	rcall	.-1272   	; 0x158 <init_uart0>
+ 650:	8f e8       	ldi	r24, 0x8F	; 143
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 652:	91 e0       	ldi	r25, 0x01	; 1
+ 654:	01 97       	sbiw	r24, 0x01	; 1
+ 656:	f1 f7       	brne	.-4      	; 0x654 <main+0x56>
+ 658:	00 c0       	rjmp	.+0      	; 0x65a <main+0x5c>
+ 65a:	00 00       	nop
+ 65c:	6b ef       	ldi	r22, 0xFB	; 251
+	
+	_delay_us(100);                    // 명령처리 대기시간
+	
+	LCD_print(0x80,"Polytech Facial ");               // 1열 문자열 출력
+ 65e:	71 e0       	ldi	r23, 0x01	; 1
+ 660:	80 e8       	ldi	r24, 0x80	; 128
+ 662:	62 dd       	rcall	.-1340   	; 0x128 <LCD_print>
+ 664:	6c e0       	ldi	r22, 0x0C	; 12
+	LCD_print(0xC0,"Security System ");
+ 666:	72 e0       	ldi	r23, 0x02	; 2
+ 668:	80 ec       	ldi	r24, 0xC0	; 192
+ 66a:	5e dd       	rcall	.-1348   	; 0x128 <LCD_print>
+ 66c:	9f ef       	ldi	r25, 0xFF	; 255
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 66e:	eb e7       	ldi	r30, 0x7B	; 123
+ 670:	f2 e9       	ldi	r31, 0x92	; 146
+ 672:	91 50       	subi	r25, 0x01	; 1
+ 674:	e0 40       	sbci	r30, 0x00	; 0
+ 676:	f0 40       	sbci	r31, 0x00	; 0
+ 678:	e1 f7       	brne	.-8      	; 0x672 <main+0x74>
+ 67a:	00 c0       	rjmp	.+0      	; 0x67c <main+0x7e>
+ 67c:	00 00       	nop
+	
+	_delay_ms(3000);
+	
+	LCD_print(0x80," Please Select  ");               // 1열 문자열 출력
+ 67e:	6d e1       	ldi	r22, 0x1D	; 29
+ 680:	72 e0       	ldi	r23, 0x02	; 2
+ 682:	80 e8       	ldi	r24, 0x80	; 128
+ 684:	51 dd       	rcall	.-1374   	; 0x128 <LCD_print>
+	LCD_print(0xC0," Security_Mode  ");
+ 686:	6e e2       	ldi	r22, 0x2E	; 46
+ 688:	72 e0       	ldi	r23, 0x02	; 2
+ 68a:	80 ec       	ldi	r24, 0xC0	; 192
+ 68c:	4d dd       	rcall	.-1382   	; 0x128 <LCD_print>
+ 68e:	df e0       	ldi	r29, 0x0F	; 15
+			LCD_cmd(0x01);			
+			mode=facial_mode;
+		}
+		else if((PINF&0x02)==0)
+		{
+			PORTB=0x0F;
+ 690:	0f 2e       	mov	r0, r31
+			OCR3A = 150;
+ 692:	f6 e8       	ldi	r31, 0x86	; 134
+ 694:	ef 2e       	mov	r14, r31
+ 696:	f1 2c       	mov	r15, r1
+ 698:	f0 2d       	mov	r31, r0
+ 69a:	06 e9       	ldi	r16, 0x96	; 150
+ 69c:	10 e0       	ldi	r17, 0x00	; 0
+ 69e:	c0 ef       	ldi	r28, 0xF0	; 240
+	{	
+		
+		
+		if((PINF&0x01)==0)
+		{	
+			PORTB=0xF0;
+ 6a0:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+			LCD_cmd(0x01);
+			mode=keypad_mode;	
+		}
+		
+		
+		switch(mode)
+ 6a4:	00 99       	sbic	0x00, 0	; 0
+	
+	while (1)
+	{	
+		
+		
+		if((PINF&0x01)==0)
+ 6a6:	17 c0       	rjmp	.+46     	; 0x6d6 <main+0xd8>
+		{	
+			PORTB=0xF0;
+ 6a8:	c8 bb       	out	0x18, r28	; 24
+			LCD_print(0x80,"     Facial     ");               // 1열 문자열 출력
+ 6aa:	6f e3       	ldi	r22, 0x3F	; 63
+ 6ac:	72 e0       	ldi	r23, 0x02	; 2
+ 6ae:	80 e8       	ldi	r24, 0x80	; 128
+ 6b0:	3b dd       	rcall	.-1418   	; 0x128 <LCD_print>
+			LCD_print(0xC0,"Recognition Mode");
+ 6b2:	60 e5       	ldi	r22, 0x50	; 80
+ 6b4:	72 e0       	ldi	r23, 0x02	; 2
+ 6b6:	80 ec       	ldi	r24, 0xC0	; 192
+ 6b8:	37 dd       	rcall	.-1426   	; 0x128 <LCD_print>
+ 6ba:	2f ef       	ldi	r18, 0xFF	; 255
+ 6bc:	8b e7       	ldi	r24, 0x7B	; 123
+ 6be:	92 e9       	ldi	r25, 0x92	; 146
+ 6c0:	21 50       	subi	r18, 0x01	; 1
+ 6c2:	80 40       	sbci	r24, 0x00	; 0
+ 6c4:	90 40       	sbci	r25, 0x00	; 0
+ 6c6:	e1 f7       	brne	.-8      	; 0x6c0 <main+0xc2>
+ 6c8:	00 c0       	rjmp	.+0      	; 0x6ca <main+0xcc>
+ 6ca:	00 00       	nop
+			_delay_ms(3000);
+			LCD_cmd(0x01);			
+ 6cc:	81 e0       	ldi	r24, 0x01	; 1
+ 6ce:	fc dc       	rcall	.-1544   	; 0xc8 <LCD_cmd>
+ 6d0:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__DATA_REGION_ORIGIN__>
+			mode=facial_mode;
+ 6d4:	23 c0       	rjmp	.+70     	; 0x71c <main+0x11e>
+ 6d6:	01 99       	sbic	0x00, 1	; 0
+		}
+		else if((PINF&0x02)==0)
+ 6d8:	1b c0       	rjmp	.+54     	; 0x710 <main+0x112>
+		{
+			PORTB=0x0F;
+ 6da:	d8 bb       	out	0x18, r29	; 24
+			OCR3A = 150;
+ 6dc:	f7 01       	movw	r30, r14
+ 6de:	11 83       	std	Z+1, r17	; 0x01
+		    LCD_print(0x80,"     Key_Pad    ");               // 1열 문자열 출력
+ 6e0:	00 83       	st	Z, r16
+ 6e2:	61 e6       	ldi	r22, 0x61	; 97
+ 6e4:	72 e0       	ldi	r23, 0x02	; 2
+ 6e6:	80 e8       	ldi	r24, 0x80	; 128
+ 6e8:	1f dd       	rcall	.-1474   	; 0x128 <LCD_print>
+			LCD_print(0xC0,"      Mode      ");
+ 6ea:	62 e7       	ldi	r22, 0x72	; 114
+ 6ec:	72 e0       	ldi	r23, 0x02	; 2
+ 6ee:	80 ec       	ldi	r24, 0xC0	; 192
+ 6f0:	1b dd       	rcall	.-1482   	; 0x128 <LCD_print>
+ 6f2:	ff ef       	ldi	r31, 0xFF	; 255
+ 6f4:	2b e7       	ldi	r18, 0x7B	; 123
+ 6f6:	82 e9       	ldi	r24, 0x92	; 146
+ 6f8:	f1 50       	subi	r31, 0x01	; 1
+ 6fa:	20 40       	sbci	r18, 0x00	; 0
+ 6fc:	80 40       	sbci	r24, 0x00	; 0
+ 6fe:	e1 f7       	brne	.-8      	; 0x6f8 <main+0xfa>
+ 700:	00 c0       	rjmp	.+0      	; 0x702 <main+0x104>
+ 702:	00 00       	nop
+			_delay_ms(3000);
+			LCD_cmd(0x01);
+ 704:	81 e0       	ldi	r24, 0x01	; 1
+ 706:	e0 dc       	rcall	.-1600   	; 0xc8 <LCD_cmd>
+			mode=keypad_mode;	
+ 708:	81 e0       	ldi	r24, 0x01	; 1
+ 70a:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+		}
+		
+		
+		switch(mode)
+ 70e:	08 c0       	rjmp	.+16     	; 0x720 <main+0x122>
+ 710:	88 23       	and	r24, r24
+ 712:	21 f0       	breq	.+8      	; 0x71c <main+0x11e>
+ 714:	81 30       	cpi	r24, 0x01	; 1
+ 716:	09 f0       	breq	.+2      	; 0x71a <main+0x11c>
+ 718:	c5 cf       	rjmp	.-118    	; 0x6a4 <main+0xa6>
+		{
+			case facial_mode:
+			face_mode();
+ 71a:	02 c0       	rjmp	.+4      	; 0x720 <main+0x122>
+ 71c:	9d dd       	rcall	.-1222   	; 0x258 <face_mode>
+			break;
+ 71e:	c0 cf       	rjmp	.-128    	; 0x6a0 <main+0xa2>
+			
+			case keypad_mode:
+			key_mode();
+ 720:	d9 dd       	rcall	.-1102   	; 0x2d4 <key_mode>
+ 722:	be cf       	rjmp	.-132    	; 0x6a0 <main+0xa2>
+
+00000724 <_exit>:
+			break;
+ 724:	f8 94       	cli
+
+00000726 <__stop_program>:
+ 726:	ff cf       	rjmp	.-2      	; 0x726 <__stop_program>
